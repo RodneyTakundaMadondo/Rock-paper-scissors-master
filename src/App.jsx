@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function App() {
    const [score,setScore] = useState(0);
    return (
-      <BrowserRouter>
+      <BrowserRouter basename="/Rock-paper-scissors-master/">
          <Routes>
             <Route element={<Layout score={score} />}>
                <Route path="/" element={<Home />} />
