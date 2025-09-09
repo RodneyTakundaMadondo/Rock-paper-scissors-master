@@ -11,8 +11,8 @@ export default function Layout(props) {
              <GameBanner score={props.score} />
             <Outlet />
            </div>
-            <div className="flex justify-center fixed  left-1/2 -translate-x-1/2 pt-8">
-                <button onClick={() => setOpenModal(true)} className="uppercase text-white font-bold border-solid border-2 px-8 py-2 rounded-md ">Rules</button>
+            <div className="flex justify-center items-center pt-8 lg:pt-0 lg:pr-16">
+                <button onClick={() => setOpenModal(true)} className="uppercase tracking-widest lg:text-3xl text-white font-bold border-solid border-2 px-8 py-2 rounded-md lg:ml-auto ">Rules</button>
             </div>
             {
                 openModal ?

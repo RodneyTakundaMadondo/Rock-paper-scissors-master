@@ -1,9 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 
 export default function Result() {
     const params = useParams();
-  
+   const base = import.meta.env.BASE_URL;
 
    
 
@@ -14,7 +15,7 @@ export default function Result() {
 
                 <div className=" text-center flex flex-col gap-4">
                     <button to="/result" className={`  rounded-full h-24 w-24 sm:h-26 sm:w-26 md:h-36 md:w-36 md:p-6 lg:h-50 lg:w-50 p-3 lg:p-12 ${params.id}-btn  flex justify-center bg-white`}>
-                        <img src={`/images/icon-${params.id}.svg`} alt="" />
+                        <img src={`${base}/images/icon-${params.id}.svg`} alt="" />
                     </button>
                     <span className="uppercase text-white font-semibold lg:-order-1">You picked</span>
                 </div>
@@ -32,7 +33,7 @@ export default function Result() {
                 <div className="text-center flex flex-col gap-4">
                   
                             <button to="/result" className={`rounded-full h-24 w-24 sm:h-26 sm:w-26 md:h-36 md:w-36 md:p-6 lg:p-12 lg:h-50 lg:w-50 p-3  paper-btn  flex justify-center bg-white`}>
-                                <img src={`/images/icon-paper.svg`} alt="" />
+                                <img src={`${base}/images/icon-paper.svg`} alt="" />
                             </button>
                              {/* <button className="block mx-auto rounded-full h-24 w-24 sm:h-26 sm:w-26  lg:h-50 lg:w-50 p-3  bg-(--dark-text)">
 
