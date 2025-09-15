@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-export default function Home() {
+export default function Home({onReturn }) {
     const base = import.meta.env.BASE_URL;
+    useEffect(()=>{
+        onReturn();
+    },[])
+    
     return (
         <section className="py-16">
             <div style={{ backgroundImage: `url('${base}images/bg-triangle.svg')` }} className="relative w-[min(calc(100%-2rem),20rem)] lg:w-[min(calc(100%-2rem),30rem)] mx-auto min-h-60 min-w-[16.1rem]  lg:min-h-72 bg-contain bg-no-repeat bg-center">

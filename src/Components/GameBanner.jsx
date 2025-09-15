@@ -1,4 +1,4 @@
-export default function GameBanner(props) {
+export default function GameBanner({score}) {
   
     return (
 
@@ -11,7 +11,7 @@ export default function GameBanner(props) {
             </div>
             <div className="flex flex-col items-center rounded-sm text-(--dark-text) font-bold bg-white px-6 py-2 justify-center lg:px-8">
                 <span className="uppercase text-[0.7rem] lg:text-xl">score</span>
-                <span className="text-3xl lg:text-5xl">{props.score}</span>
+                <span className="text-3xl lg:text-5xl">{score}</span>
             </div>
 
         </div>
