@@ -5,8 +5,10 @@ import Result from './Pages/Result'
 import { useEffect, useState } from "react";
 
 export default function App() {
-   const choices = ["rock", "paper", "scissors"];
+ 
    const [randomItem, setRandomItem] = useState(null);
+   const [advancedMode,setAdvancedMode] = useState(false);
+     const choices = advancedMode? ["rock", "paper", "scissors","lizard","spock"]: ["rock", "paper", "scissors"];
    const [score, setScore] = useState(() => {
       const savedScore = localStorage.getItem("gameScore");
 
@@ -17,8 +19,7 @@ export default function App() {
       const randomIndex = Math.floor(Math.random() * choices.length);
       setRandomItem(choices[randomIndex]);
    }
-
-   console.log(score)
+  
    useEffect(() => {
       localStorage.setItem("gameScore", score)
    }, [score])
@@ -26,8 +27,8 @@ export default function App() {
    return (
       <BrowserRouter basename="/Rock-paper-scissors-master/">
          <Routes>
-            <Route element={<Layout score={score} />}>
-               <Route path="/" element={<Home onReturn={generateRandomItem} />} />
+            <Route element={<Layout score={score} advancedMode={advancedMode} setAdvancedMode={setAdvancedMode} />}>
+               <Route path="/" element={<Home advancedMode={advancedMode} onReturn={generateRandomItem} />} />
                <Route path="/result/:playerChoice" element={<Result score={score} setScore={setScore} randomItem={randomItem} />} />
             </Route>
          </Routes>

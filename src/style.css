@@ -26,7 +26,9 @@ body {
 }
 .rock-btn,
 .paper-btn,
-.scissors-btn{
+.scissors-btn,
+.spock-btn,
+.lizard-btn{
   border: 0.8rem solid transparent; /* border thickness */
   background-clip: padding-box, border-box;
   color: black;
@@ -48,4 +50,14 @@ body {
   background: linear-gradient(white, white) padding-box,
     var(--scissors-gradient) border-box; /* gradient border */
   box-shadow: 0px 5px hsl(39, 89%, 49%);
+}
+.spock-btn {
+  background: linear-gradient(white, white) padding-box,
+    var(--spock-gradient) border-box; /* gradient border */
+  box-shadow: 0px 5px hsl(189, 59%, 53%);
+}
+.lizard-btn {
+  background: linear-gradient(white, white) padding-box,
+    var(--lizard-gradient) border-box; /* gradient border */
+  box-shadow: 0px 5px hsl(261, 73%, 60%);
 }
