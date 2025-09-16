@@ -67,7 +67,7 @@ export default function Result({ randomItem, setScore }) {
 
                             <div className="flex flex-col gap-8 text-center lg:min-h-[108px] lg:min-w-[368px] ">
                                 <h1 className="text-white font-bold uppercase text-5xl"> {winner} </h1>
-                                <Link className="bg-white mt-auto uppercase px-4 py-2 block max-w-[15rem] font-semibold text-lg rounded-xl mx-auto" to="/">
+                                <Link className="bg-white mt-auto uppercase px-4 py-2 block max-w-[15rem] font-semibold text-lg rounded-xl mx-auto hover:text-[#dc2f4f] transition-colors duration-300 ease-in-out" to="/">
                                     Play again
                                 </Link>
                             </div>
