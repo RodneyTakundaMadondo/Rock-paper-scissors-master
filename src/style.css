@@ -39,25 +39,53 @@ body {
 .paper-btn {
   background: linear-gradient(white, white) padding-box,
     /* button inner color */ var(--paper-gradient) border-box; /* gradient border */
-  box-shadow: 0px 5px hsl(230, 89%, 65%);
+  box-shadow: 0px 5px hsl(230, 79%, 59%), 0 7px hsl(228, 21%, 78%) inset;
 }
 .rock-btn {
   background: linear-gradient(white, white) padding-box,
     var(--rock-gradient) border-box; /* gradient border */
-  box-shadow: 0px 5px hsl(349, 71%, 52%);
+  box-shadow: 0px 5px hsl(346, 74%, 35%), 0 7px hsl(228, 21%, 78%) inset;
 }
 .scissors-btn {
   background: linear-gradient(white, white) padding-box,
     var(--scissors-gradient) border-box; /* gradient border */
-  box-shadow: 0px 5px hsl(39, 89%, 49%);
+  box-shadow: 0px 5px hsl(29, 78%, 44%), 0 7px hsl(228, 21%, 78%) inset;
 }
 .spock-btn {
   background: linear-gradient(white, white) padding-box,
     var(--spock-gradient) border-box; /* gradient border */
-  box-shadow: 0px 5px hsl(189, 59%, 53%);
+  box-shadow: 0px 5px hsl(194, 58%, 43%), 0 7px hsl(228, 21%, 78%) inset;
 }
 .lizard-btn {
   background: linear-gradient(white, white) padding-box,
     var(--lizard-gradient) border-box; /* gradient border */
-  box-shadow: 0px 5px hsl(261, 73%, 60%);
+  box-shadow: 0px 5px hsl(261, 74%, 56%), 0 7px hsl(228, 21%, 78%) inset ;
+}
+
+.player-choice-container{
+  left:10%;
+  animation: shiftleft 0.3s;
+}
+@keyframes shiftleft{
+  from{left:25%}
+  to{left:10%}
+}
+.house-choice-container{
+  right: 10%;
+  animation: shiftright 0.3s;
+}
+@keyframes shiftright{
+  from{right: 25%;}
+  to{right:10%}
+}
+.placeholder-btn{
+    animation-name: pulse;
+      animation-duration: 0.2s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+}
+@keyframes pulse{
+  from{width:240px;height: 240px;}
+  to{width:104px;height: 104px;}
 }

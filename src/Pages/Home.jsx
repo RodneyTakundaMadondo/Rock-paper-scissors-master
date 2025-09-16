@@ -33,7 +33,7 @@ export default function Home({ onReturn, advancedMode }) {
                             <Link to="/result/spock" className="absolute game-btn top-0 left-0 translate-y-1/2 rounded-full h-22 w-22 sm:h-26 sm:w-26 lg:h-36 lg:w-36 p-3 md:p-5 spock-btn border-2 border-solid flex justify-center bg-white">
                                 <img src={`${base}images/icon-spock.svg`} alt="" />
                             </Link>
-                            <Link to="/result/scissors" className="absolute game-btn bottom-0 left-6 translate-y-1/2 rounded-full h-22 w-22 sm:h-26 sm:w-26 lg:h-36 lg:w-36 p-3 md:p-5 lizard-btn border-2 border-solid flex justify-center bg-white">
+                            <Link to="/result/lizard" className="absolute game-btn bottom-0 left-6 translate-y-1/2 rounded-full h-22 w-22 sm:h-26 sm:w-26 lg:h-36 lg:w-36 p-3 md:p-5 lizard-btn border-2 border-solid flex justify-center bg-white">
                                 <img src={`${base}images/icon-lizard.svg`} alt="" />
                             </Link>
                         </> : ""
